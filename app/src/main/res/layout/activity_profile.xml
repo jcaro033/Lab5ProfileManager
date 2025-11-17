@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a new avatar"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="380dp"
+        android:layout_height="558dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="107dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/ca_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_ca"
+                android:onClick="SetTeamIcon"/>
+
+            <ImageView
+                android:id="@+id/fr_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_fr"
+                android:onClick="SetTeamIcon"/>
+
+            <ImageView
+                android:id="@+id/jp_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_jp"
+                android:onClick="SetTeamIcon"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/sp_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_sp"
+                android:onClick="SetTeamIcon"/>
+
+            <ImageView
+                android:id="@+id/eg_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_eg"
+                android:onClick="SetTeamIcon"/>
+
+            <ImageView
+                android:id="@+id/kr_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_kr"
+                android:onClick="SetTeamIcon"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/us_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_us"
+                android:onClick="SetTeamIcon" />
+
+            <ImageView
+                android:id="@+id/tr_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_tr"
+                android:onClick="SetTeamIcon"
+                />
+
+            <ImageView
+                android:id="@+id/uk_flag"
+                android:layout_width="110dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/flag_uk"
+                android:onClick="SetTeamIcon"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
