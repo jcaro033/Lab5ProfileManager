@@ -53,16 +53,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
     ActivityResultLauncher<Intent> profileLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
+                //returned from choosing new profile
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
+                        //profile photo on main screen
                         ImageView avatarImage = (ImageView) findViewById(R.id.flag);
 
-                        String drawableName = "ca_flag";
+                        //get flag image file chosen
+                        String drawableName;
                         int imageID = data.getIntExtra("imageID", R.id.ca_flag);
                         if (imageID == R.id.ca_flag) {
                             drawableName = "flag_ca";
@@ -85,19 +90,12 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             drawableName = "flag_ca";
                         }
+                        //change photo on main screen to new image
                         int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
                         avatarImage.setImageResource(resID);
 
 
-                        //Tried to do example from lab video
-                        /*assert data != null;
-                        String textData = data.getStringExtra("imageID");
-                        ImageView avatarImage = (ImageView) findViewById(R.id.flag);
-                        int imageId = getResources().getIdentifier(textData, "drawable", getPackageName());
-                        ImageView flagID = findViewById(R.id.flag);
-                        flagID.setImageResource(imageId);
 
-                         */
 
 
                     }
