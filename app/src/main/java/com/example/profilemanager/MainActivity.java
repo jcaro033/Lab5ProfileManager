@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
             Button openMaps = (Button) findViewById(R.id.openMaps);
             openMaps.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View v) {
                     EditText teamAddress = (EditText) findViewById(R.id.addressInput);
