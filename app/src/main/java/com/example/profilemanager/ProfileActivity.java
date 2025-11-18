@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
         ImageView selectedImage = (ImageView) view;
 
         //add details to return
-        returnIntent.putExtra("imageId", selectedImage.getId());
+        returnIntent.putExtra("imageID", selectedImage.getId());
         setResult(RESULT_OK,returnIntent);
 
 
