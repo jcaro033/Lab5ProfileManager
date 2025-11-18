@@ -11,9 +11,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Select a new avatar"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,11 +23,13 @@
         android:layout_width="380dp"
         android:layout_height="558dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="15dp"
         android:stretchColumns="*"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="107dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TableRow
             android:layout_width="match_parent"
@@ -37,22 +40,22 @@
                 android:id="@+id/ca_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_ca"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_ca" />
 
             <ImageView
                 android:id="@+id/fr_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_fr"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_fr" />
 
             <ImageView
                 android:id="@+id/jp_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_jp"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_jp" />
 
         </TableRow>
 
@@ -65,23 +68,22 @@
                 android:id="@+id/sp_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_sp"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_sp" />
 
             <ImageView
                 android:id="@+id/eg_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_eg"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_eg" />
 
             <ImageView
                 android:id="@+id/kr_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_kr"
                 android:onClick="SetTeamIcon"
-                />
+                app:srcCompat="@drawable/flag_kr" />
         </TableRow>
 
         <TableRow
@@ -92,23 +94,22 @@
                 android:id="@+id/us_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_us"
-                android:onClick="SetTeamIcon" />
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_us" />
 
             <ImageView
                 android:id="@+id/tr_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_tr"
                 android:onClick="SetTeamIcon"
-                />
+                app:srcCompat="@drawable/flag_tr" />
 
             <ImageView
                 android:id="@+id/uk_flag"
                 android:layout_width="110dp"
                 android:layout_height="111dp"
-                app:srcCompat="@drawable/flag_uk"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                app:srcCompat="@drawable/flag_uk" />
         </TableRow>
 
     </TableLayout>

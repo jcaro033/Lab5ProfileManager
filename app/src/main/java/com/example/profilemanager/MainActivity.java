@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     //creates url from string
                     Uri mapsUrl = Uri.parse("https://maps.google.co.in/maps?q=" + teamAddress.getText());
 
-                    //Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapsUrl);
-                    Intent mapIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("google.navigation:q="+teamAddress.getText()));
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapsUrl);
+                    //Intent mapIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("google.navigation:q="+teamAddress.getText()));
                     mapIntent.setPackage("com.google.android.apps.maps");
 
                     startActivity(mapIntent);
@@ -60,40 +60,30 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
-                        ImageView avatarImage = (ImageView) findViewById(R.id.avatarImage);
+                        ImageView avatarImage = (ImageView) findViewById(R.id.flag);
 
-                        String drawableName = "flag_02";
-                        switch(data.getIntExtra("imageID", R.id.flagid00)){
-                            case R.id.flagid00:
-                                drawableName = "flag_00";
-                                break;
-                            case R.id.flag01:
-                                drawableName = "flag_01";
-                                break;
-                            case R.id.flag02:
-                                drawableName = "flag_02";
-                                break;
-                            case R.id.flag03:
-                                drawableName = "flag_03";
-                                break;
-                            case R.id.flag04:
-                                drawableName = "flag_04";
-                                break;
-                            case R.id.flag05:
-                                drawableName = "flag_05";
-                                break;
-                            case R.id.flag06:
-                                drawableName = "flag_06";
-                                break;
-                            case R.id.flag07:
-                                drawableName = "flag_07";
-                                break;
-                            case R.id.flag08:
-                                drawableName = "flag_08";
-                                break;
-                            case R.id.flag09:
-                                drawableName = "flag_09";
-                                break;
+                        String drawableName = "ca_flag";
+                        int imageID = data.getIntExtra("imageID", R.id.ca_flag);
+                        if (imageID == R.id.ca_flag) {
+                            drawableName = "flag_ca";
+                        } else if (imageID == R.id.fr_flag) {
+                            drawableName = "flag_fr";
+                        } else if (imageID == R.id.jp_flag) {
+                            drawableName = "flag_jp";
+                        } else if (imageID == R.id.sp_flag) {
+                            drawableName = "flag_sp";
+                        } else if (imageID == R.id.eg_flag) {
+                            drawableName = "flag_eg";
+                        } else if (imageID == R.id.kr_flag) {
+                            drawableName = "flag_kr";
+                        } else if (imageID == R.id.us_flag) {
+                            drawableName = "flag_us";
+                        } else if (imageID == R.id.tr_flag) {
+                            drawableName = "flag_tr";
+                        } else if (imageID == R.id.uk_flag) {
+                            drawableName = "flag_uk";
+                        } else {
+                            drawableName = "flag_ca";
                         }
                         int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
                         avatarImage.setImageResource(resID);
